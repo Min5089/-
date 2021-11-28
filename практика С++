@@ -1,0 +1,38 @@
+# include <iostream>
+using namespace std;
+
+ int main()
+{
+    int** mas = new int* [4];
+    mas[0] = new int [3];
+    mas[1] = new int [2];
+    mas[2] = new int [1];
+    mas[3] = new int [2];
+    for (int a = 0 ; a < 4; a++)
+    {
+        for (int j = 0 ; j < 4 ; j++)
+        { 
+            if (a == 0 & j<3)
+            {
+                mas[a][j] = rand() % 10;
+            }
+            else if (a == 1 & j < 2)
+            {
+                mas[a][j] = rand() % 10;
+            }
+            else if (a == 2 & j == 0)
+            {
+                mas[a][j] = rand() % 10;
+            }
+            else if (a == 3 & j < 2)
+            {
+                mas[a][j] = rand() % 10;
+            }    
+
+        } 
+    }
+    cout << mas[0][0] << " " << mas[0][1] << " " << mas[0][2] <<endl ;
+    cout << mas[1][0] << " " << mas[1][1] << endl;
+    cout << mas[2][0] << endl;
+    cout << mas[3][0] << " " << mas[3][1] << endl;
+} 
